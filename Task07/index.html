@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/idb@5/build/iife/index-min.js"></script>
+    <title>Угадай число</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="container">
+        <div class="content">
+            <div class="head">
+                <div class="title">Угадай число</div>
+            </div>
+            <div class="body">
+                <div id="greeting" class="greeting">
+                    <p>Здравствуйте! Как Вас зовут?</p>
+
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name" onkeydown="if (event.keyCode == 13) document.getElementById('nextInfo').click()" name="name">
+                        <input type="button" class="b1" id="nextInfo" value="Далее">
+
+                </div>
+                
+                <div class="menuGame" id="menuGame">
+                    <button id="newGame" class="b1">Новая игра</button>
+                    <button id="listAllGame" class="b1">Список всех игр</button>
+                    <button id="listWinGame" class="b1">Список выигранных игр</button>
+                    <button id="listLossGame" class="b1">Список проигранных игр</button>
+                </div>
+
+                <div class="information" id="information">
+                    <p id="info" class="info"></p>
+                    <button  class="b1" id="nextShowGame">Далее</button>
+                </div>
+
+                <div class="show-game" id="show-game">
+                   
+                        <label for="getNumber">Ваше число:</label>
+                        <input type="number" class="b1", id="getNumber" onkeydown="if (event.keyCode == 13) document.getElementById('checkNumber').click()" name="getNumber">
+                        <input type="button"  class="b1" id="checkNumber" value="Отправить">
+                   
+                </div>
+
+                <div class="message" id="message"></div>
+
+                <div class="list" id="list">
+                    <div class="text_list" id="text_list"></div>
+                    <br>
+                    <button  class="b1" onclick="document.getElementById('list').style.display = 'none'; document.getElementById('menuGame').style.display = 'flex'">Меню</button>
+                </div>
+
+                <div class="result" id="result">
+                    <p id="resultText"></p>
+
+                    <button  class="b1" id="replayGame">Заново</button>
+                    <br>
+                    <button  class="b1" id="goMenu">Меню</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/Controller.js" type="module"></script>
+</body>
+</html>
