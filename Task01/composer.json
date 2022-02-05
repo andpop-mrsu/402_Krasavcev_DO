@@ -17,6 +17,6 @@
         ]
     },
     "bin": [
-        "bin/run-test"
+        "bin/run_test"
     ]
 }
